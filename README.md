@@ -6,10 +6,14 @@ To install Twilio:
 ```bash
 pip install twilio 
 ```
-Email sender uses smtplib that can be configured to apply SMTP protocol on gmail (smtplib.SMTP('smtp.gmail.com', 587)), yahoo (smtplib.SMTP('smtp.mail.yahoo.com', 587)), etc., and unlike previous Twilio SMS sender, due to no need to a third party company like Twilio, the service is free of charge.
 
-It should be noted, on May 30, 2022 Google has restricted the access to gmail using a third party app like ours ([Link]([https://support.google.com/accounts/answer/6010255?hl=en)). Therefore, the user has to create app password (2 step verification should be enable prior to that). Here is the link to create app password as well as a video:
+
+
+Email sender uses smtplib, which can be configured to apply the SMTP protocol on services like Gmail (smtplib.SMTP('smtp.gmail.com', 587)), Yahoo (smtplib.SMTP('smtp.mail.yahoo.com', 587)), and others. Unlike the previous Twilio SMS sender, this email service is free of charge as it doesn't require a third-party company like Twilio.
+
+It should be noted that, on May 30, 2022, Google restricted access to Gmail using third-party apps like ours. Therefore, users need to create an app password, and 2-step verification should be enabled prior to that. Here is the link to create an app password, along with a video guide:
 [Google Link](https://support.google.com/accounts/answer/6010255?hl=en)
+
 Lastly, instead of smtplib, other options like yagmail can be employed as well by:
 ```bash
 pip install yagmail
