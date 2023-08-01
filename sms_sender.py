@@ -1,10 +1,10 @@
 from twilio.rest import Client
 
 def send_sms_alert(body):
-    account_sid = 'your_account_sid'
-    auth_token = 'your_auth_token'
+    account_sid = ''
+    auth_token = ''
     twilio_phone_number = '+1...'  # your Twilio phone number
-    recipient_phone_number = '+1...'  # recipient's phone number
+    recipient_phone_number = '+1438...'  # recipient's phone number
 
     try:
         # Create a Twilio client
@@ -17,11 +17,15 @@ def send_sms_alert(body):
             to=recipient_phone_number
         )
 
-        print("SMS sent successfully! SID:", message.sid)
+        print("SMS sent successfully! SID:", message.sid) #message.sid is like unqiue id of an SMS
     except Exception as e:
         print("Error sending SMS:", e)
 
 # Example usage: Call this function when an alert occurs
-alert_body = "ALERT: Something went wrong! Please take immediate action."
+alert_body = "Hi, this is a test alert!"
 
-send_sms_alert(alert_body)
+user_demand = input('Do you want to send a alert? (y/n):')
+if user_demand == 'y':
+    send_sms_alert(alert_body)
+else:
+    print('Ok so alert is sent')
