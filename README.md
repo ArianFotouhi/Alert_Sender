@@ -21,7 +21,6 @@ pip install yagmail
 
 
 
-
 ## NotifPy 
 
 NotifPy is an all-in-one Python package designed to enable users to effortlessly send email and SMS notifications or alerts to designated email addresses and phone numbers. With NotifPy, integrating robust email and SMS functionalities into applications becomes seamless, facilitating prompt communication with target audiences.
@@ -40,7 +39,7 @@ sender = EmailNotif.email_notif(sender_address='A@B.com', sender_password='your_
 sender.EmailSender(subject = "It's me! Hi!", body='This is a test')
 ```
 
-Please Note, the default email service provider of app is gmail while simply it can be configured to yahoo, outlook/hotmail and the customized mode:
+It is noteworthy, the default email service provider of package is gmail while simply it can be configured to yahoo, outlook/hotmail and the customized mode:
 ```python
 sender.EmailSender(subject = "It's me! Hi!", body='This is a test', email_provider='yahoo')
 sender.EmailSender(subject = "It's me! Hi!", body='This is a test', email_provider='outlook')
